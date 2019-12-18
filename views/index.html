@@ -1,0 +1,36 @@
+{if="hasMessage()==true"}
+<div class="alert alert-danger" role="alert">
+    {$message}
+</div>
+{/if}
+    
+    <session>
+        <div class="col-md-12 text-center header">
+                <h1>Quem será seu candidato em 2022?</h1>
+        </div>
+    </session>
+
+    <div class="container">
+        <div class="row">
+            {loop="$candidato"}
+            <div class="col-sm-3 candidato">
+                <div class="foto">
+
+                    <a href="votar-{$value.randcode}"><img src="{$value.foto}"> </a>
+
+
+
+                </div>
+                <div class="nome">
+                    <p>{$value.nome}</p>   
+                </div>
+                <div class="partido">
+                    <p>{$value.partido}</p>
+                </div>
+                <div class="votos">
+                    <p>{$value.votos}</p>
+                </div>
+            </div>
+            {/loop}    
+        </div>  
+    </div>
