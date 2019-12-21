@@ -1,3 +1,41 @@
+<script src="res/jquery/jquery.min.js"></script>
+<script src="res/owl-carousel2/owl.carousel.min.js"></script>
+<script src="res/bootstrap/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		$(".thumbnails").owlCarousel({
+			loop:true,
+			margin: 10,
+			nav:true,
+			navText: ["Anterior", "Próximo"],
+			responsive: {
+				0: {
+					item: 1
+				},
+				480: {
+					item: 3
+				},
+				768: {
+					item: 4
+				},
+				1200: {
+					item: 4
+				}
+			}
+		});
+		
+		$("#mobile-button").on("click", function(){
 
+			  $("header").toggleClass("open-menu");
+
+			});
+		
+		
+		
+	});
+	
+	
+</script>
     </body>
 </html>

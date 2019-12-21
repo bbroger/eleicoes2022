@@ -11,7 +11,7 @@ class Candidatos extends Model
     public static function listAll()
 	{
 		$sql = new Sql();
-		return $sql->select("SELECT * FROM tbcandidatos ORDER BY id DESC");
+		return $sql->select("SELECT * FROM tbcandidatos ORDER BY RAND()");
 		
     }
     
@@ -28,7 +28,15 @@ class Candidatos extends Model
 	 	$results = $sql->select("SELECT * FROM tbcandidatos WHERE randcode = :randcode", [
 	 		":randcode"=>$randcode
 	 	]);
-	 	$this->setData($results[0]);
+		 
+		if (count($results) == 1) {
+		
+	 		$this->setData($results[0]);
+		} else {
+			$_SESSION['message'] = 'O código de votação deste candidato expirou. Tente novamente ou leia nossa política de privacidade para saber mais.';
+			header("Location: /eleicoes2022");
+			exit;
+		}
 	 }
 
 	public function tryVote($randcode)

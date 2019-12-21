@@ -8,6 +8,27 @@
 
 }
 
+#mobile-button {
+	display: none;
+}
+#menu-mobile-mask {
+	display: none;
+}
+#menu-mobile {
+	display: none;
+}
+#btn-news-next {
+	display: none;
+}
+#btn-news-prev {
+	display: none;
+}
+#slider-aviso {
+	color: #000;
+	margin: 5px;
+}
+
+
 #menu {
 
     background-color: #00b16a;
@@ -48,6 +69,10 @@
 
 }
 
+#menu i {
+	display: none;
+}
+
 
 
 .header h1 {
@@ -60,12 +85,10 @@
 
 }
 
-.candidato {
-
-    padding: 42px;
-
-    background-image: url("res/img/zucker.jpg");
-
+.candidatos {
+	text-align: center;
+	margin-left: 15px;
+	margin-top: 20px;
 }
 
 
@@ -126,3 +149,14 @@
     margin-top: 65px;
 }
 
+.texto {
+    text-align: justify;
+}
+
+.termos hr {
+    width: 50%;
+    border-top: dashed 2px;
+    color: #cacaca;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

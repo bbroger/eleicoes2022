@@ -1,17 +1,40 @@
 <html>
-    <head>
+	<head>
         <meta charset="utf-8">
+		<meta name="viewport" content="device-width, initial-scale=1">
         <title>Eleições 2022</title>
         <link rel="stylesheet" href="res/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="res/owl-carousel2/assets/owl.carousel.css">
-        <link ref="stylesheet" href="res/owl-carousel2/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="res/owl-carousel2/owl.carousel.css">
+        <link ref="stylesheet" href="res/owl-carousel2/owl.theme.default.min.css">
         <link rel="stylesheet" href="res/css/stylesheet.css">
+		<link rel="stylesheet" href="res/css/stylesheet-mobile.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script src="https://kit.fontawesome.com/bb415f76f1.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
+		<header>
+			
+			<div id="menu-mobile-mask" class=""></div>
+			
+			
+			<div id="menu-mobile" class="">
+			<ul>
+                        <li><a href="/eleicoes2022">INICIO</a></li>
+                        {if="checkLogin()==1"}
+                        <li>Olá {function="userNome()"} - (<a href="sair">Sair</a>)</li>
+                        {else}
+                        <li><a href="cadastre">Cadastre-se</a></li>
+                        <li><a href="login">Entrar</a></li>
+                        {/if}
+                        <li><a href="politica-de-privacidade">Política de Privacidade</a></li>
+                    </ul>
+			</div>
+			
+			
+			
                 <div id="menu">
+					<button id="mobile-button" type="button" class="fa fa-bars"></button>
                     <ul>
                         <li><a href="/eleicoes2022">INICIO</a></li>
                         {if="checkLogin()==1"}
@@ -23,6 +46,5 @@
                         <li><a href="politica-de-privacidade">Política de Privacidade</a></li>
                     </ul>
                 </div>
-               
             </header>
         
